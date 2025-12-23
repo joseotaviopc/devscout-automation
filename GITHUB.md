@@ -71,17 +71,27 @@ devscout-automation/
 ## 🔧 Customization
 
 ### Browser Selection
-Edit `main.py` line 41:
+
+**Option 1 - Original (Playwright):**
 ```python
-# Safari (default)
-self.browser = await self.playwright.webkit.launch(**browser_options)
-
-# Chrome
-self.browser = await self.playwright.chromium.launch(**browser_options)
-
-# Firefox
-self.browser = await self.playwright.firefox.launch(**browser_options)
+# main.py - Requires browser downloads (may not work on PythonAnywhere free)
 ```
+
+**Option 2 - Manual Browser Detection (PythonAnywhere Compatible):**
+```python
+# main_manual_browser.py - Smart browser detection
+# Uses existing system browsers (Chromium/Firefox/Safari)
+# No downloads required
+```
+
+**Option 3 - requests + BeautifulSoup (No Browser):**
+```python
+# main_requests.py - Pure HTTP requests
+# Works within any internet restrictions
+# Lightweight and fast
+```
+
+**Choose based on your deployment environment!**
 
 ### Schedule Time
 Edit `.env`:
