@@ -263,13 +263,13 @@ class DevScoutAutomation:
     async def click_enviar_automaticamente(self):
         """Click the 'enviar automaticamente' button"""
         try:
-            logging.info("Looking for 'enviar automaticamente' button")
+            logging.info("Looking for 'Enviar Automaticamente' button")
 
             # Try multiple selectors
             selectors = [
-                'button:has-text("enviar automaticamente")',
-                'button:has-text("Enviar Automaticamente")',
-                'button:has-text("ENVIAR AUTOMATICAMENTE")',
+                'div:has-text("enviar automaticamente")',
+                'div:has-text("Enviar Automaticamente")',
+                'div:has-text("ENVIAR AUTOMATICAMENTE")',
                 '[data-testid*="enviar"]',
                 'button[type="submit"]',
             ]
